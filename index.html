@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@3.x/dist/vuetify.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@3.x/dist/vuetify.min.js"></script>
+
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+
+    <div id="app">
+        <v-app>
+            <v-app-bar>
+                <v-app-bar-title>
+                    Ducks Around The World
+                </v-app-bar-title>
+            </v-app-bar>
+            <v-main>
+                <v-container>
+                    <v-row>
+                        <v-col cols="3" v-for="item in collection" :key="item.name">
+                
+                <v-card class="height=500 mx-auto bg-orange-lighten-3 elevation-12">
+                    <v-card-title class = "text-h5 font-weight-bold-700 font-italic text-orange-darken-4 text-center text-decoration-underline">{{item.species}}</v-card-title>
+
+                    <v-card-subtitle class="text-center">
+                        {{item.order}} {{item.region}}
+                    </v-card-subtitle>
+
+                    <v-card-text>
+                        {{item.fact}}
+                    </v-card-text>
+
+                    <v-img :src="item.image" height="300" cover></v-img>
+                </v-card>
+
+                        </v-col>
+                    </v-row>
+                </v-container>
+
+            </v-main>
+        </v-app>
+    </div>
+    
+</body>
+</html>
