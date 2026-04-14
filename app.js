@@ -1,6 +1,7 @@
-const { createApp } = Vue;
+const { createApp, ref } = Vue;
 const { createVuetify } = Vuetify;
 const vuetify = createVuetify();
+
 const App = {
  setup() {
   const title = "Ducks"
