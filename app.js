@@ -53,13 +53,50 @@ const collection = [
   fact : "Thanks to conservation efforts, Wood ducks are now off the endangered list.",
   image : "duck images/pexels-ibautista-8133982.jpg",
 }
-]
+];
 
+    const projects = [
+      {
+        title: "Duck Cards Collection",
+        description: "Learn about ducks on trading cards.",
+        whatILearned: "I explored the basics of JavaScript by making variables, arrays, dynamic loops and responsive layouts to display my data.",
+        image: "pexels-stephentcandrews-9536946.jpg",
+        url: "https://madsb04.github.io/Ducks-around-the-world-/"
+      },
+
+      {
+        title: "Parrot Nail Trim Clicker Game",
+        description: "Trim the nails of three different parrot species!",
+        whatILearned: "I learned how to use functions, parameters and conditional logic statements and reactivity to make this interactive game.",
+        image: "pexels-freestockpro-12861708.jpg",
+        url: "https://madsb04.github.io/Point-and-Click-nail-trim/"
+      },
+
+      {
+        title: "Monarch Butterfly Graph Data",
+        description: "Learn about what is impacting Monarch Butterflies.",
+        whatILearned: "I built this data dashboard from raw data into readable layouts using sparkline, stepper and data table concepts.",
+        image: "pexels-ricardo-olvera-225422504-20199021.jpg",
+        url: "https://madsb04.github.io/Monarch-line-graphs-/"
+      },
+    ];
+
+      const showopenDrawer = ref(false);
+
+
+    function toggleOpenCloseopenDrawer(){
+        if (showopenDrawer.value == false){showopenDrawer.value = true}
+        else {showopenDrawer.value = false}
+    }
 
 
  return {
    collection,
-   title
+   title, 
+   projects,
+   showopenDrawer,
+   toggleOpenCloseopenDrawer
+
   };
  }
 }

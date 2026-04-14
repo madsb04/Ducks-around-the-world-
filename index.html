@@ -22,7 +22,24 @@
                     Ducks Around The World
                 </v-app-bar-title>
             </v-app-bar>
+            
             <v-main>
+
+                    <v-app-bar>
+        <v-app-bar-nav-icon @click="toggleOpenCloseopenDrawer"></v-app-bar-nav-icon>
+        <v-app-bar-title>Coding Inquiry Portfolio</v-app-bar-title>
+    </v-app-bar>
+
+        <v-container>
+            <!-- <v-btn @click="toggleOpenCloseopenDrawer">openDrawer</v-btn> -->
+
+            <v-navigation-drawer v-model="showopenDrawer">
+                <v-list-item hrf="https://madsb04.github.io/Coding-Inquiry-Portfolio/">Home</v-list-item>
+                <v-list-item v-for="item in projects" :key="item.title" :href="item.url">
+                    {{item.title}}
+                </v-list-item>
+            </v-navigation-drawer>
+
                 <v-container>
                     <v-row>
                         <v-col cols="3" v-for="item in collection" :key="item.name">
